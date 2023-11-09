@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+   front:
+     build: 
+       context: ./front/angular-app/
+     ports:
+       - "4200:4200"
+     volumes:
+         - ./front/angular-app/:/app/front
+
+   back:
+     build:
+      context: ./back/spring-boot-app/
+     ports:
+      - "8080:8080"
+     volumes:
+        - ./back/spring-boot-app/:/app/back
+  
+  #mongodb:
+    #image: 'mongo:latest'
+    #environment:
+    #  - 'MONGO_INITDB_DATABASE=mydatabase'
+    #  - 'MONGO_INITDB_ROOT_PASSWORD=secret'
+    #  - 'MONGO_INITDB_ROOT_USERNAME=root'
+    #ports:
+    #  - '27017'
