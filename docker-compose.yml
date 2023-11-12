@@ -1,27 +1,19 @@
 version: '3.1'
 
 services:
-  #  front:
-  #    build: 
-  #      context: ./front/angular-app/
-  #    ports:
-  #      - "4200:4200"
-  #    volumes:
-  #        - ./front/angular-app/:/app/front
-
-   back:
-     build:
+  front:
+    build:
+      context: ./front/
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./front/:/app/front
+    depends_on:
+      - back
+  back:
+    build:
       context: ./back/
-     ports:
+    ports:
       - "8080:8080"
-     volumes:
-        - ./back/:/app/back
-  
-  #mongodb:
-    #image: 'mongo:latest'
-    #environment:
-    #  - 'MONGO_INITDB_DATABASE=mydatabase'
-    #  - 'MONGO_INITDB_ROOT_PASSWORD=secret'
-    #  - 'MONGO_INITDB_ROOT_USERNAME=root'
-    #ports:
-    #  - '27017'
+    volumes:
+      - ./back/:/app/back

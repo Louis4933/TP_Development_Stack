@@ -1,18 +1,13 @@
-<section>
-    <main>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let book of books">
-                <td>{{book.id}}</td>
-                <td>{{book.name}}</td>
-                <td>{{book.price}}</td>
-            </tr>
-        </tbody>
-    </main>
-</section>
+<div *ngFor="let book of books">
+  <p>{{ book.name }}</p>
+  <p>{{ book.price }}</p>
+  <button (click)="updateBook(book.id)">Update</button>
+  <button (click)="deleteBook(book.id)">Delete</button>
+</div>
+
+<div>
+  <h2>Add a Book</h2>
+  <input [(ngModel)]="newBook.name" placeholder="name" />
+  <input [(ngModel)]="newBook.price" placeholder="price" type="number" />
+  <button (click)="addBook()">Add Book</button>
+</div>
