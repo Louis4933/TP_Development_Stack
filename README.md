@@ -3,6 +3,7 @@ The application is an online library where existing books can be added, deleted,
 
 # To use
 docker-compose up --build
+
 docker-compose down
 
 # The stack
