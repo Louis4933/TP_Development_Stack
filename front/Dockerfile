@@ -7,7 +7,12 @@ WORKDIR /app/front
 # Copy the package.json and package-lock.json files
 COPY package*.json ./
 
-COPY node_modules/ ./node_modules/
+# Install dependencies
+RUN npm install
+
+# Copy the rest of your app's source code
+COPY . .
+
 # Expose the port on which the Angular application listens
 EXPOSE 4200
 
