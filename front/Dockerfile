@@ -2,7 +2,7 @@
 FROM node:latest as build
 
 # Set the working directory in the container
-WORKDIR /app/front
+WORKDIR /usr/src/app
 
 # Copy the package.json and package-lock.json files
 COPY package*.json ./

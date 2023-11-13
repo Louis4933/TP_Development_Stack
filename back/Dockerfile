@@ -1,9 +1,11 @@
-FROM openjdk:latest
+FROM maven:3.6.3-openjdk-17
 
 WORKDIR /app
 
-COPY ./target/spring-boot-app-0.0.1-SNAPSHOT.jar /app/spring-boot-app.jar
+COPY ./ /app
+
+RUN mvn package
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "spring-boot-app.jar"]
+CMD ["java", "-jar", "target/spring-boot-app-0.0.1-SNAPSHOT.jar"]

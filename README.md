@@ -2,11 +2,7 @@
 The application is an online library where existing books can be added, deleted, updated and viewed. It is coded in AngularJS, Spring Boot and uses the H2 in-memory database.
 
 # To use
-cd back/
-
-./mvnw package
-
-docker-compose up --build
+docker-compose up --build -d
 
 docker-compose down
 
