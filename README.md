@@ -1,16 +1,38 @@
-# Docker Project : Angular (front-end) / Spring Boot (back-end) / H2 in-memory database
-The application is an online library where existing books can be added, deleted, updated and viewed. It is coded in AngularJS, Spring Boot and uses the H2 in-memory database.
+# Docker Project
+The application is an online library where existing books can be added, deleted, updated and viewed. It is coded in AngularJS (front-end), Spring Boot (back-end) and uses the H2 in-memory database.
 
 # Goal
-Building a working set of docker layers
+Simple project in order to build a working set of docker layers.
 
-# To use
-docker-compose up --build -d
+# Installation and use
 
-docker-compose down
+## Clone this Git repository on your local machine using the following command:
+```bash
+git clone https://github.com/Louis4933/TP_Development_Stack.git
+```
+
+## Navigate to the cloned directory:
+``bash
+cd TP_Development_Stack/
+```
+
+## Launch the application:
+``bash
+docker-compose up
+```
+
+## Stop application:
+```bash
+Ctrl+C or docker-compose down
+```
+
+## Delete application
+```bash
+docker-compose down --rmi all -v
+```
 
 # The stack
-The stack is made up of a front-end, in the application's front folder, and a back-end, in the application's back folder. The front depends on the back, so as not to needlessly continue launching an erroneous application.
+The front depends on the back, so as not to needlessly continue launching an erroneous application.
 
 # Screenshot
 
