@@ -17,7 +17,7 @@ cd TP_Development_Stack/
 ```
 
 ## Launch the application:
-``bash
+```bash
 docker-compose up
 ```
 
