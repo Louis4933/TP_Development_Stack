@@ -1,6 +1,9 @@
 # Docker Project : Angular (front-end) / Spring Boot (back-end) / H2 in-memory database
 The application is an online library where existing books can be added, deleted, updated and viewed. It is coded in AngularJS, Spring Boot and uses the H2 in-memory database.
 
+# Goals 
+Building a working set of docker layers
+
 # To use
 docker-compose up --build -d
 
