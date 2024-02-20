@@ -12,7 +12,7 @@ git clone https://github.com/Louis4933/TP_Development_Stack.git
 ```
 
 ## Navigate to the cloned directory:
-``bash
+```bash
 cd TP_Development_Stack/
 ```
 
